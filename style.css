@@ -48,3 +48,54 @@ table {
 }
 
 /*===========reset==============*/
+
+#container {
+	padding: 25px;
+	background-color: lightskyblue;
+    display: flex;
+	flex-direction: column;
+    justify-content: space-evenly;
+}
+
+div {
+    display: flex; 
+    flex-direction: column-reverse; 
+    align-items: center;
+}
+
+.bar {
+	height: 110px;
+	width: 20px;
+	background-color: black;
+	border-radius: 5px;
+}
+
+.box {
+    padding: 15px;
+}
+
+.disk {
+    height: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#disk1 {
+    width: 150px;
+    background-color: red;
+}
+
+#disk2 {
+    width: 120px;
+    background-color: green;
+}
+
+#disk3 {
+    width: 90px;
+    background-color: indigo;
+}
+
+#disk4 {
+    width: 60px;
+    background-color: blue;
+}
