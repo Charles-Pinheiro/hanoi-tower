@@ -57,6 +57,10 @@ table {
     justify-content: space-evenly;
 }
 
+h1 {
+    display: none;
+}
+
 div {
     display: flex; 
     flex-direction: column-reverse; 
@@ -129,4 +133,55 @@ button {
     background-color: rgb(0 157 255 / 41%);
     color: #FFF;
     font-size: 1.2rem;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+@media screen and (min-width: 768px) {
+    #container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100vh;
+        padding: 0;
+    }
+
+    h1 {
+        display: block;
+        font-size: 75px;
+        padding: 0 122px;
+    }
+
+    .bar {
+        height: 140px;
+        width: 20px;
+    }
+
+    #disk1 {
+        width: 160px;
+    }
+    
+    #disk2 {
+        width: 130px;
+    }
+    
+    #disk3 {
+        width: 100px;
+    }
+    
+    #disk4 {
+        width: 70px;
+    }
+
+    p {
+        padding: 0 40vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        padding: 0px 11rem;
+        margin: 0px 15rem;
+    }
 }

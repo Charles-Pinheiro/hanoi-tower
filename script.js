@@ -17,6 +17,7 @@ let spanMovies = document.getElementById("movies");
 
 let boxWin = document.createElement("div");
 let restartButton = document.createElement("button");
+let message = document.createElement("p");
 
 //=========logic=========
 
@@ -83,17 +84,20 @@ const winner = () => {
     if (children3 === 4) {
         boxWin.id = "win";
         container.appendChild(boxWin);
-
-        let message = document.createElement("p");
+        
         message.id = "winMessage";
         message.innerHTML = "Você Venceu!"
-
 
         restartButton.id = "winButton";
         restartButton.innerHTML = "Recomeçar"
 
         boxWin.appendChild(message);
         boxWin.appendChild(restartButton);
+
+        let boxes = [box1, box2, box3]
+        for (let i = 0; i < boxes.length; i++) {
+        boxes[i].classList.add("disabled");
+    }
     }
 }
 
@@ -101,12 +105,18 @@ const restart = () => {
 
     container.removeChild(boxWin);
 
+    message.innerHTML = "";
     counter = 0;
     spanMovies.innerHTML = `${counter}`;
 
     let disks = [disk1, disk2, disk3, disk4];
     for (let i = 0; i < disks.length; i++) {
         bar1.appendChild(disks[i]);
+    }
+
+    let boxes = [box1, box2, box3]
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].classList.remove("disabled");
     }
 }
 
